@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Движение без давления — мягкий вход в спорт</title>
+<meta name="description" content="Интерактивный маршрут от психологических барьеров до регулярного движения: 5–10 минут в день, без стыда, боли и «надо».">
+<style>
+:root{--bg:#0e1116;--card:#151a22;--line:#232b36;--text:#e8edf4;--muted:#9aa7b6;--accent:#7ee0a3;--accent2:#8ab6ff;--warn:#ffd479}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+.wrap{max-width:980px;margin:0 auto;padding:24px 18px 80px}
+header{padding:34px 0 10px}
+.badge{display:inline-block;border:1px solid var(--line);background:#10151c;color:var(--muted);border-radius:999px;padding:6px 12px;font-size:13px}
+h1{font-size:clamp(30px,6vw,52px);line-height:1.08;margin:18px 0 12px;letter-spacing:-.02em}
+h1 span{color:var(--accent)}
+.sub{color:var(--muted);font-size:18px;max-width:720px}
+.cta{display:inline-flex;gap:10px;align-items:center;background:var(--accent);color:#08210f;font-weight:700;border:none;border-radius:14px;padding:14px 20px;font-size:16px;cursor:pointer;margin-top:22px;text-decoration:none}
+.cta.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+section{margin-top:56px}
+h2{font-size:clamp(24px,4vw,34px);margin:0 0 10px;letter-spacing:-.01em}
+.lead{color:var(--muted);max-width:760px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+.card h3{margin:0 0 8px;font-size:18px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.tag{font-size:12px;color:var(--accent);border:1px solid #22402f;background:#122018;padding:3px 8px;border-radius:999px;display:inline-block;margin-bottom:10px}
+.quiz{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px;margin-top:24px}
+.q{display:none}
+.q.active{display:block}
+.q h3{margin:0 0 6px}
+.q p{color:var(--muted);margin:0 0 18px}
+.opts{display:grid;gap:10px}
+button.opt{text-align:left;background:#10151c;border:1px solid var(--line);color:var(--text);border-radius:14px;padding:14px 16px;cursor:pointer;font-size:15px;transition:.15s}
+button.opt:hover{border-color:var(--accent);transform:translateY(-1px)}
+.nav{display:flex;justify-content:space-between;margin-top:18px}
+.btn{background:transparent;border:1px solid var(--line);color:var(--text);border-radius:12px;padding:10px 16px;cursor:pointer}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#08210f;font-weight:700}
+.progress{height:6px;background:#10151c;border-radius:99px;overflow:hidden;margin-bottom:20px}
+.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:.3s}
+.result{display:none}
+.result.active{display:block}
+.plan{border:1px solid #22402f;background:#122018;border-radius:16px;padding:18px;margin-top:16px}
+.plan b{color:var(--accent)}
+ul{padding-left:20px;color:var(--muted)}
+li{margin:6px 0}
+.task{border-left:3px solid var(--warn);background:#191b16;border-radius:0 12px 12px 0;padding:12px 14px;margin-top:12px;color:#e7dcc2;font-size:14px}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:22px;color:var(--muted);font-size:14px}
+.notice{font-size:13px;color:var(--muted);margin-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="badge">Демо · веб-версия будущего Telegram Mini App</div>
+<h1>Начни двигаться <span>без давления</span> — по маршруту, который подходит именно тебе</h1>
+<p class="sub">Не «худей к лету» и не «тренируйся через силу». Сначала разберёмся, что мешает, затем выберем мягкий формат на 5–10 минут в день и соберём привычку шаг за шагом.</p>
+<a class="cta" href="#quiz">Пройти маршрут за 2 минуты</a>
+<a class="cta ghost" href="#tracks">Посмотреть треки</a>
+<p class="notice">Демо не заменяет консультацию врача. При острой боли, травме, беременности или хронических заболеваниях сначала согласуйте нагрузку со специалистом.</p>
+</header>
+
+<section id="why">
+<h2>Почему большинство бросает не из-за лени</h2>
+<p class="lead">Часто старт блокируют слишком большая цель, страх сделать «неправильно», усталость, дискомфорт в теле и ощущение, что спорт — это обязательно тяжело. Поэтому первый шаг должен быть маленьким, приятным и предсказуемым.</p>
+<div class="grid">
+<div class="card"><span class="tag">Барьер</span><h3>«У меня нет времени»</h3><p>Начинаем с коротких movement snacks: 5–10 минут, которые можно встроить между делами.</p></div>
+<div class="card"><span class="tag">Барьер</span><h3>«Я не знаю, с чего начать»</h3><p>Маршрут сам выбирает формат: дыхание, мобильность, осанка, баланс, мягкая сила.</p></div>
+<div class="card"><span class="tag">Барьер</span><h3>«Мне больно / некомфортно»</h3><p>Сначала снижаем напряжение и улучшаем контроль, а не гонимся за интенсивностью.</p></div>
+<div class="card"><span class="tag">Барьер</span><h3>«Я уже бросал(а)»</h3><p>Никаких streak-давлений: разрешённые пропуски, гибкий минимум и возврат без чувства вины.</p></div>
+</div>
+</section>
+
+<section id="quiz">
+<h2>Собери свой маршрут</h2>
+<p class="lead">Ответь на несколько вопросов — получишь стартовый план на первую неделю и поймёшь, какой трек тебе ближе.</p>
+<div class="quiz">
+<div class="progress"><i id="bar"></i></div>
+
+<div class="q active" data-step="0">
+<h3>Что сейчас важнее всего?</h3>
+<p>Выбери то, что откликается сильнее — правильного ответа нет.</p>
+<div class="opts">
+<button class="opt" data-k="energy">Хочу больше энергии и меньше усталости</button>
+<button class="opt" data-k="back">Хочу снять скованность в спине и шее</button>
+<button class="opt" data-k="posture">Хочу улучшить осанку и ощущение собранности</button>
+<button class="opt" data-k="mobility">Хочу двигаться свободнее и легче</button>
+<button class="opt" data-k="legs">Важны колени, стопы, баланс и уверенность при ходьбе</button>
+<button class="opt" data-k="strength">Хочу стать сильнее, но начать дома и без фанатизма</button>
+</div>
+</div>
+
+<div class="q" data-step="1">
+<h3>Что чаще всего мешает начать?</h3>
+<div class="opts">
+<button class="opt" data-k="time">Не хватает времени</button>
+<button class="opt" data-k="motivation">Не хватает мотивации и энергии</button>
+<button class="opt" data-k="fear">Страшно сделать неправильно или получить боль</button>
+<button class="opt" data-k="boredom">Быстро становится скучно</button>
+<button class="opt" data-k="allnone">Не понимаю, с чего начать</button>
+</div>
+</div>
+
+<div class="q" data-step="2">
+<h3>Сколько времени реально готов(а) уделять в первые 7 дней?</h3>
+<div class="opts">
+<button class="opt" data-k="5">5 минут в день</button>
+<button class="opt" data-k="10">10 минут в день</button>
+<button class="opt" data-k="15">15–20 минут, 3 раза в неделю</button>
+<button class="opt" data-k="flex">Пусть будет гибкий минимум — хотя бы 2 минуты</button>
+</div>
+</div>
+
+<div class="q" data-step="3">
+<h3>Какой формат тебе ближе?</h3>
+<div class="opts">
+<button class="opt" data-k="calm">Спокойный: дыхание, расслабление, мягкая мобильность</button>
+<button class="opt" data-k="functional">Практичный: осанка, таз, баланс, повседневные движения</button>
+<button class="opt" data-k="active">Более активный: сила, корпус, контроль движений</button>
+<button class="opt" data-k="mixed">Не знаю — хочу попробовать смешанный вариант</button>
+</div>
+</div>
+
+<div class="q" data-step="4">
+<h3>Что поможет не бросить?</h3>
+<div class="opts">
+<button class="opt" data-k="reminder">Напоминание в удобное время</button>
+<button class="opt" data-k="short">Очень короткое первое действие</button>
+<button class="opt" data-k="why">Понимание, зачем это нужно моему телу</button>
+<button class="opt" data-k="person">Поддержка инструктора и обратная связь</button>
+</div>
+</div>
+
+<div class="result" id="result">
+<h3>Твой стартовый маршрут готов</h3>
+<p id="resultText" class="lead"></p>
+<div class="plan" id="plan"></div>
+<div class="task"><b>Задача для инструктора:</b> записать 3 коротких видео-разминки по 5 минут под выбранный запрос; подготовить аудио-введение «почему мы начинаем с малого»; добавить чек-ин после 3-го дня.</div>
+<div class="nav"><button class="btn" onclick="restart()">Пройти заново</button><a class="btn primary" href="#tracks">Открыть трек</a></div>
+</div>
+
+<div class="nav" id="quizNav" style="display:none">
+<button class="btn" onclick="prev()">Назад</button>
+<span></span>
+</div>
+</div>
+</section>
+
+<section id="tracks">
+<h2>Семь треков входа в движение</h2>
+<p class="lead">Треки основаны на идее постепенного возвращения к движению: от дыхания и восстановления к контролю, мобильности и силе. Уровень можно повышать только тогда, когда текущий стал комфортным.</p>
+<div class="grid">
+<div class="card"><span class="tag">Трек 1</span><h3>Дыхание и восстановление</h3><p>Снизить напряжение, вернуть связь дыхания и движения, начать с 5 минут.</p></div>
+<div class="card"><span class="tag">Трек 2</span><h3>Поясница и позвоночник</h3><p>Мягкая мобильность, стабилизация корпуса, меньше скованности после сидения.</p></div>
+<div class="card"><span class="tag">Трек 3</span><h3>Осанка и плечи</h3><p>Для тех, кто много за компьютером: грудной отдел, лопатки, шея, контроль положения.</p></div>
+<div class="card"><span class="tag">Трек 4</span><h3>Таз и мобильность</h3><p>Легче приседать, наклоняться и менять положения без ощущения зажатости.</p></div>
+<div class="card"><span class="tag">Трек 5</span><h3>Колени, стопы и баланс</h3><p>Устойчивость, уверенная ходьба, лестница, снижение перегрузки в ногах.</p></div>
+<div class="card"><span class="tag">Трек 6</span><h3>Сила тела</h3><p>Базовые движения с собственным весом: приседания, отжимания, удержания, перенос веса.</p></div>
+<div class="card"><span class="tag">Трек 7</span><h3>Кор и контроль</h3><p>Стабильность корпуса, координация, баланс и уверенность в движении.</p></div>
+</div>
+<div class="task"><b>Задача для инструктора:</b> для каждого трека подготовить уровень 0 («вход»), уровень 1 («база») и уровень 2 («уверенность»); к каждому уровню — короткое объяснение, зачем это упражнение нужно.</div>
+</section>
+
+<section id="flow">
+<h2>Как работает воронка</h2>
+<div class="grid">
+<div class="card"><h3>1. Диагностика без ярлыков</h3><p>Мягкий опрос: цель, барьеры, комфортное время, самочувствие, предпочтительный формат.</p></div>
+<div class="card"><h3>2. Микро-старт</h3><p>Первая сессия — 2–5 минут. Задача не «потренироваться», а доказать мозгу: это возможно и безопасно.</p></div>
+<div class="card"><h3>3. Привычка</h3><p>Гибкий минимум, напоминания, короткая обратная связь и понятный критерий «когда можно усложнить».</p></div>
+<div class="card"><h3>4. Переход к сопровождению</h3><p>Когда человеку нужна техника, персональная прогрессия или поддержка — органично предлагаем инструктора.</p></div>
+</div>
+</section>
+
+<section id="trends">
+<h2>Что усиливает продукт сейчас</h2>
+<div class="grid">
+<div class="card"><h3>Микро-тренировки</h3><p>Короткие 5–15-минутные сессии стали одним из главных трендов: их проще повторять и встраивать в день.</p></div>
+<div class="card"><h3>Микро-персонализация</h3><p>Не общий план, а рекомендация под состояние, доступное время, запрос и уровень комфорта.</p></div>
+<div class="card"><h3>Холистичный подход</h3><p>Движение связано со сном, стрессом, восстановлением и образом жизни — это повышает ценность продукта.</p></div>
+<div class="card"><h3>Мягкая геймификация</h3><p>Прогресс, напоминания и маленькие награды работают лучше, чем жёсткие стрики и чувство вины.</p></div>
+<div class="card"><h3>Telegram Mini App</h3><p>Воронка живёт там, где человек уже находится: опрос, план, пуш, видео, чек-ин и запись к инструктору.</p></div>
+<div class="card"><h3>Инклюзивность</h3><p>Разные тела, уровни, возраст и состояние — продукт не должен стыдить за «недостаточно хорошую форму».</p></div>
+</div>
+</section>
+
+<footer>
+<p><b>Следующий шаг:</b> подключить Telegram WebApp SDK, сохранить ответы в localStorage/бэкенд, добавить пуш-сценарии, видеоуроки и лид-форму к инструктору.</p>
+<p>© Демо-версия маршрута «Движение без давления» · Юра Семенов</p>
+</footer>
+</div>
+
+<script>
+const answers={};let step=0;const steps=[...document.querySelectorAll('.q')];
+function show(i){steps.forEach((s,idx)=>s.classList.toggle('active',idx===i));document.getElementById('bar').style.width=(i/steps.length*100)+'%';document.getElementById('quizNav').style.display=i>0&&i<steps.length?'flex':'none';}
+document.querySelectorAll('.opt').forEach(b=>b.addEventListener('click',()=>{const q=b.closest('.q');answers[q.dataset.step]=b.dataset.k;if(q.dataset.step<steps.length-1){step++;show(step);}else{finish();}}));
+function prev(){if(step>0){step--;show(step);}}
+function restart(){Object.keys(answers).forEach(k=>delete answers[k]);step=0;document.getElementById('result').classList.remove('active');show(0);document.getElementById('bar').style.width='0%';document.getElementById('result').scrollIntoView({behavior:'smooth'});}
+function finish(){
+document.getElementById('bar').style.width='100%';steps.forEach(s=>s.classList.remove('active'));
+const goal=answers[0],barrier=answers[1],time=answers[2],style=answers[3],support=answers[4];
+const track={energy:'Дыхание и восстановление + мягкая активация',back:'Поясница и позвоночник',posture:'Осанка и плечи',mobility:'Таз и мобильность',legs:'Колени, стопы и баланс',strength:'Сила тела и контроль движения'}[goal];
+const minutes={5:'5 минут',10:'10 минут','15':'15–20 минут',flex:'гибкий минимум от 2 минут'}[time];
+const first={calm:'3 минуты дыхания и мягкой мобильности',functional:'3 минуты мобильности таза и позвоночника',active:'3 минуты мягкой силы и баланса',mixed:'3 минуты дыхания, мобильности и одного силового движения'}[style];
+document.getElementById('resultText').textContent=`Тебе ближе трек «${track}». На первую неделю ставим ${minutes}: без рекордов, боли и необходимости «нагнать» пропущенное.`;
+document.getElementById('plan').innerHTML=`<b>День 1–2:</b> ${first}.<br><b>День 3–4:</b> добавить одно упражнение на контроль и осанку.<br><b>День 5–7:</b> повторить комфортный вариант и отметить самочувствие.<br><b>Правило:</b> если нет сил — выполняется минимальная версия. Это тоже считается.<br><b>Когда переходить дальше:</b> если 3 занятия подряд прошли без дискомфорта и хочется чуть большего.`;
+document.getElementById('result').classList.add('active');
+document.getElementById('result').scrollIntoView({behavior:'smooth'});
+}
+show(0);
+</script>
+</body>
+</html>
