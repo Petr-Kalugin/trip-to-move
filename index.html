@@ -9,44 +9,63 @@
 :root{--bg:#0e1116;--card:#151a22;--line:#232b36;--text:#e8edf4;--muted:#9aa7b6;--accent:#7ee0a3;--accent2:#8ab6ff;--warn:#ffd479}
 *{box-sizing:border-box}
 body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
-.wrap{max-width:980px;margin:0 auto;padding:24px 18px 80px}
+.wrap{max-width:1040px;margin:0 auto;padding:24px 18px 80px}
 header{padding:34px 0 10px}
 .badge{display:inline-block;border:1px solid var(--line);background:#10151c;color:var(--muted);border-radius:999px;padding:6px 12px;font-size:13px}
 h1{font-size:clamp(30px,6vw,52px);line-height:1.08;margin:18px 0 12px;letter-spacing:-.02em}
 h1 span{color:var(--accent)}
-.sub{color:var(--muted);font-size:18px;max-width:720px}
+h2{font-size:clamp(24px,4vw,34px);margin:0 0 10px;letter-spacing:-.01em}
+h3{margin:0 0 8px;font-size:18px}
+h4{margin:18px 0 8px;font-size:16px;color:var(--accent)}
+.sub{color:var(--muted);font-size:18px;max-width:760px}
+.lead{color:var(--muted);max-width:780px}
 .cta{display:inline-flex;gap:10px;align-items:center;background:var(--accent);color:#08210f;font-weight:700;border:none;border-radius:14px;padding:14px 20px;font-size:16px;cursor:pointer;margin-top:22px;text-decoration:none}
 .cta.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
 section{margin-top:56px}
-h2{font-size:clamp(24px,4vw,34px);margin:0 0 10px;letter-spacing:-.01em}
-.lead{color:var(--muted);max-width:760px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:24px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
-.card h3{margin:0 0 8px;font-size:18px}
 .card p{margin:0;color:var(--muted);font-size:15px}
 .tag{font-size:12px;color:var(--accent);border:1px solid #22402f;background:#122018;padding:3px 8px;border-radius:999px;display:inline-block;margin-bottom:10px}
 .quiz{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px;margin-top:24px}
-.q{display:none}
-.q.active{display:block}
-.q h3{margin:0 0 6px}
+.q{display:none}.q.active{display:block}
 .q p{color:var(--muted);margin:0 0 18px}
 .opts{display:grid;gap:10px}
 button.opt{text-align:left;background:#10151c;border:1px solid var(--line);color:var(--text);border-radius:14px;padding:14px 16px;cursor:pointer;font-size:15px;transition:.15s}
 button.opt:hover{border-color:var(--accent);transform:translateY(-1px)}
 .nav{display:flex;justify-content:space-between;margin-top:18px}
-.btn{background:transparent;border:1px solid var(--line);color:var(--text);border-radius:12px;padding:10px 16px;cursor:pointer}
+.btn{background:transparent;border:1px solid var(--line);color:var(--text);border-radius:12px;padding:10px 16px;cursor:pointer;text-decoration:none;display:inline-block}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:#08210f;font-weight:700}
 .progress{height:6px;background:#10151c;border-radius:99px;overflow:hidden;margin-bottom:20px}
 .progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:.3s}
-.result{display:none}
-.result.active{display:block}
+.result{display:none}.result.active{display:block}
 .plan{border:1px solid #22402f;background:#122018;border-radius:16px;padding:18px;margin-top:16px}
 .plan b{color:var(--accent)}
-ul{padding-left:20px;color:var(--muted)}
+ul{padding-left:20px;color:var(--muted);margin:8px 0}
 li{margin:6px 0}
 .task{border-left:3px solid var(--warn);background:#191b16;border-radius:0 12px 12px 0;padding:12px 14px;margin-top:12px;color:#e7dcc2;font-size:14px}
+.track{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin-top:16px}
+.track-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+.level{font-size:12px;color:var(--accent2);border:1px solid #26364d;background:#101823;padding:4px 9px;border-radius:999px}
+.week{border:1px solid var(--line);background:#10151c;border-radius:14px;padding:14px;margin-top:10px}
+.week b{color:var(--accent)}
+.mini{font-size:14px;color:var(--muted)}
+.rule{border:1px solid #2b3a2f;background:#122018;border-radius:14px;padding:14px;margin-top:12px}
+.rule b{color:var(--accent)}
 footer{margin-top:70px;border-top:1px solid var(--line);padding-top:22px;color:var(--muted);font-size:14px}
 .notice{font-size:13px;color:var(--muted);margin-top:14px}
+details{border:1px solid var(--line);background:#10151c;border-radius:14px;padding:12px 14px;margin-top:10px}
+summary{cursor:pointer;font-weight:600}
+details p{color:var(--muted);font-size:15px;margin:8px 0 0}
+.today{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px;margin-top:24px}
+.timer{font-size:44px;font-weight:800;letter-spacing:-.02em;margin:10px 0;color:var(--accent)}
+.pill{display:inline-block;border:1px solid var(--line);background:#10151c;color:var(--muted);border-radius:999px;padding:5px 10px;font-size:13px;margin:4px 6px 4px 0}
+.feedback{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.fb{background:#10151c;border:1px solid var(--line);color:var(--text);border-radius:12px;padding:10px 14px;cursor:pointer}
+.fb:hover{border-color:var(--accent)}
+.fb.selected{border-color:var(--accent);color:var(--accent)}
+.next{border:1px solid #22402f;background:#122018;border-radius:16px;padding:16px;margin-top:16px;display:none}
+.next.active{display:block}
+.check{display:flex;align-items:center;gap:10px;margin-top:14px;color:var(--muted);font-size:15px}
 </style>
 </head>
 <body>
@@ -56,15 +75,15 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding-top:22px;color:v
 <h1>Начни двигаться <span>без давления</span> — по маршруту, который подходит именно тебе</h1>
 <p class="sub">Не «худей к лету» и не «тренируйся через силу». Сначала разберёмся, что мешает, затем выберем мягкий формат на 5–10 минут в день и соберём привычку шаг за шагом.</p>
 <a class="cta" href="#quiz">Пройти маршрут за 2 минуты</a>
-<a class="cta ghost" href="#tracks">Посмотреть треки</a>
-<p class="notice">Демо не заменяет консультацию врача. При острой боли, травме, беременности или хронических заболеваниях сначала согласуйте нагрузку со специалистом.</p>
+<a class="cta ghost" href="#today">Попробовать сессию</a>
+<p class="notice">Демо не заменяет консультацию врача. При острой боли, травме, головокружении, онемении, беременности или хронических заболеваниях сначала согласуйте нагрузку со специалистом. Боль — сигнал остановиться и скорректировать упражнение.</p>
 </header>
 
 <section id="why">
 <h2>Почему большинство бросает не из-за лени</h2>
 <p class="lead">Часто старт блокируют слишком большая цель, страх сделать «неправильно», усталость, дискомфорт в теле и ощущение, что спорт — это обязательно тяжело. Поэтому первый шаг должен быть маленьким, приятным и предсказуемым.</p>
 <div class="grid">
-<div class="card"><span class="tag">Барьер</span><h3>«У меня нет времени»</h3><p>Начинаем с коротких movement snacks: 5–10 минут, которые можно встроить между делами.</p></div>
+<div class="card"><span class="tag">Барьер</span><h3>«У меня нет времени»</h3><p>Начинаем с коротких movement snacks: 2–10 минут, которые можно встроить между делами.</p></div>
 <div class="card"><span class="tag">Барьер</span><h3>«Я не знаю, с чего начать»</h3><p>Маршрут сам выбирает формат: дыхание, мобильность, осанка, баланс, мягкая сила.</p></div>
 <div class="card"><span class="tag">Барьер</span><h3>«Мне больно / некомфортно»</h3><p>Сначала снижаем напряжение и улучшаем контроль, а не гонимся за интенсивностью.</p></div>
 <div class="card"><span class="tag">Барьер</span><h3>«Я уже бросал(а)»</h3><p>Никаких streak-давлений: разрешённые пропуски, гибкий минимум и возврат без чувства вины.</p></div>
@@ -73,13 +92,11 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding-top:22px;color:v
 
 <section id="quiz">
 <h2>Собери свой маршрут</h2>
-<p class="lead">Ответь на несколько вопросов — получишь стартовый план на первую неделю и поймёшь, какой трек тебе ближе.</p>
+<p class="lead">Ответь на несколько вопросов — получишь стартовый план на первые две недели и поймёшь, какая траектория тебе ближе.</p>
 <div class="quiz">
 <div class="progress"><i id="bar"></i></div>
-
 <div class="q active" data-step="0">
-<h3>Что сейчас важнее всего?</h3>
-<p>Выбери то, что откликается сильнее — правильного ответа нет.</p>
+<h3>Что сейчас важнее всего?</h3><p>Выбери то, что откликается сильнее — правильного ответа нет.</p>
 <div class="opts">
 <button class="opt" data-k="energy">Хочу больше энергии и меньше усталости</button>
 <button class="opt" data-k="back">Хочу снять скованность в спине и шее</button>
@@ -87,9 +104,7 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding-top:22px;color:v
 <button class="opt" data-k="mobility">Хочу двигаться свободнее и легче</button>
 <button class="opt" data-k="legs">Важны колени, стопы, баланс и уверенность при ходьбе</button>
 <button class="opt" data-k="strength">Хочу стать сильнее, но начать дома и без фанатизма</button>
-</div>
-</div>
-
+</div></div>
 <div class="q" data-step="1">
 <h3>Что чаще всего мешает начать?</h3>
 <div class="opts">
@@ -98,9 +113,7 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding-top:22px;color:v
 <button class="opt" data-k="fear">Страшно сделать неправильно или получить боль</button>
 <button class="opt" data-k="boredom">Быстро становится скучно</button>
 <button class="opt" data-k="allnone">Не понимаю, с чего начать</button>
-</div>
-</div>
-
+</div></div>
 <div class="q" data-step="2">
 <h3>Сколько времени реально готов(а) уделять в первые 7 дней?</h3>
 <div class="opts">
@@ -108,9 +121,7 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding-top:22px;color:v
 <button class="opt" data-k="10">10 минут в день</button>
 <button class="opt" data-k="15">15–20 минут, 3 раза в неделю</button>
 <button class="opt" data-k="flex">Пусть будет гибкий минимум — хотя бы 2 минуты</button>
-</div>
-</div>
-
+</div></div>
 <div class="q" data-step="3">
 <h3>Какой формат тебе ближе?</h3>
 <div class="opts">
@@ -118,9 +129,7 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding-top:22px;color:v
 <button class="opt" data-k="functional">Практичный: осанка, таз, баланс, повседневные движения</button>
 <button class="opt" data-k="active">Более активный: сила, корпус, контроль движений</button>
 <button class="opt" data-k="mixed">Не знаю — хочу попробовать смешанный вариант</button>
-</div>
-</div>
-
+</div></div>
 <div class="q" data-step="4">
 <h3>Что поможет не бросить?</h3>
 <div class="opts">
@@ -128,37 +137,110 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding-top:22px;color:v
 <button class="opt" data-k="short">Очень короткое первое действие</button>
 <button class="opt" data-k="why">Понимание, зачем это нужно моему телу</button>
 <button class="opt" data-k="person">Поддержка инструктора и обратная связь</button>
-</div>
-</div>
-
+</div></div>
 <div class="result" id="result">
 <h3>Твой стартовый маршрут готов</h3>
 <p id="resultText" class="lead"></p>
 <div class="plan" id="plan"></div>
+<div class="rule"><b>Правило комфорта:</b> если нет сил, времени или настроения — сделай минимальную версию. Одна минута дыхания, один наклон, одно упражнение. Это тоже считается: мы закрепляем не подвиг, а возвращаемость.</div>
 <div class="task"><b>Задача для инструктора:</b> записать 3 коротких видео-разминки по 5 минут под выбранный запрос; подготовить аудио-введение «почему мы начинаем с малого»; добавить чек-ин после 3-го дня.</div>
-<div class="nav"><button class="btn" onclick="restart()">Пройти заново</button><a class="btn primary" href="#tracks">Открыть трек</a></div>
+<div class="nav"><button class="btn" onclick="restart()">Пройти заново</button><a class="btn primary" href="#today">Начать первую сессию</a></div>
 </div>
+<div class="nav" id="quizNav" style="display:none"><button class="btn" onclick="prev()">Назад</button><span></span></div>
+</div>
+</section>
 
-<div class="nav" id="quizNav" style="display:none">
-<button class="btn" onclick="prev()">Назад</button>
-<span></span>
+<section id="today">
+<h2>Сегодня: одна сессия — один шаг</h2>
+<p class="lead">Экран «Сегодня» — сердце Mini App. Он не спрашивает «ты молодец?» и не требует идеальности. Он помогает сделать минимальное действие, отметить самочувствие и получить понятную рекомендацию на завтра.</p>
+<div class="today">
+<div class="track-head">
+<div><span class="tag">Демо-сессия</span><h3>Мягкая разминка: 5 минут</h3><p class="mini">Трек определяется по результату опроса. В рабочей версии здесь будет видео или аудио Юры.</p></div>
+<span class="level">День 1 · уровень «вход»</span>
 </div>
+<div class="timer" id="timer">05:00</div>
+<div>
+<span class="pill">Без оборудования</span><span class="pill">Можно сидя</span><span class="pill">Есть минимальная версия</span><span class="pill">Остановись при боли</span>
+</div>
+<div class="feedback">
+<button class="btn primary" onclick="startTimer()">Начать 5 минут</button>
+<button class="btn" onclick="setMin()">Сделать минимальную версию — 1 минута</button>
+</div>
+<h4>Что делаем</h4>
+<ul>
+<li>1 минута: спокойное дыхание, внимание к движению живота.</li>
+<li>1 минута: мягкие движения плечами без зажима шеи.</li>
+<li>1 минута: наклоны таза сидя в комфортной амплитуде.</li>
+<li>1 минута: медленные повороты грудной клетки.</li>
+<li>1 минута: спокойное дыхание и вопрос себе: «Где стало легче?»</li>
+</ul>
+<div class="check"><input type="checkbox" id="done"><label for="done">Я сделал(а) сессию — хотя бы минимальную версию</label></div>
+<h4>Как прошло?</h4>
+<div class="feedback">
+<button class="fb" data-fb="easy">Было легко</button>
+<button class="fb" data-fb="ok">Нормально</button>
+<button class="fb" data-fb="hard">Было тяжело</button>
+<button class="fb" data-fb="pain">Была боль / дискомфорт</button>
+</div>
+<div class="next" id="nextBox"><b id="nextTitle"></b><p id="nextText" style="color:var(--muted);margin:8px 0 0"></p></div>
+<div class="task"><b>Задача для инструктора:</b> записать видео-версию этой сессии на 5 минут и аудио-минимум на 1 минуту; добавить короткую подсказку после каждого блока: «если дискомфортно — уменьшите амплитуду или перейдите в положение сидя».</div>
 </div>
 </section>
 
 <section id="tracks">
-<h2>Семь треков входа в движение</h2>
-<p class="lead">Треки основаны на идее постепенного возвращения к движению: от дыхания и восстановления к контролю, мобильности и силе. Уровень можно повышать только тогда, когда текущий стал комфортным.</p>
-<div class="grid">
-<div class="card"><span class="tag">Трек 1</span><h3>Дыхание и восстановление</h3><p>Снизить напряжение, вернуть связь дыхания и движения, начать с 5 минут.</p></div>
-<div class="card"><span class="tag">Трек 2</span><h3>Поясница и позвоночник</h3><p>Мягкая мобильность, стабилизация корпуса, меньше скованности после сидения.</p></div>
-<div class="card"><span class="tag">Трек 3</span><h3>Осанка и плечи</h3><p>Для тех, кто много за компьютером: грудной отдел, лопатки, шея, контроль положения.</p></div>
-<div class="card"><span class="tag">Трек 4</span><h3>Таз и мобильность</h3><p>Легче приседать, наклоняться и менять положения без ощущения зажатости.</p></div>
-<div class="card"><span class="tag">Трек 5</span><h3>Колени, стопы и баланс</h3><p>Устойчивость, уверенная ходьба, лестница, снижение перегрузки в ногах.</p></div>
-<div class="card"><span class="tag">Трек 6</span><h3>Сила тела</h3><p>Базовые движения с собственным весом: приседания, отжимания, удержания, перенос веса.</p></div>
-<div class="card"><span class="tag">Трек 7</span><h3>Кор и контроль</h3><p>Стабильность корпуса, координация, баланс и уверенность в движении.</p></div>
-</div>
-<div class="task"><b>Задача для инструктора:</b> для каждого трека подготовить уровень 0 («вход»), уровень 1 («база») и уровень 2 («уверенность»); к каждому уровню — короткое объяснение, зачем это упражнение нужно.</div>
+<h2>Траектории входа в движение</h2>
+<p class="lead">Ниже — предварительное наполнение для демо. Каждая траектория начинается с уровня «вход», где задача — не нагрузка, а восстановление контакта с телом и формирование привычки. Упражнения и дозировки далее скорректирует инструктор.</p>
+
+<div class="track"><div class="track-head"><div><span class="tag">Трек 1</span><h3>Дыхание и восстановление</h3><p class="mini">Для тех, кто устал, много нервничает, мало двигается или не знает, с чего начать.</p></div><span class="level">Вход → база → уверенность</span></div>
+<div class="week"><b>Неделя 1 · Вход: 3–5 минут</b><ul><li>День 1: 5 спокойных вдохов-выдохов, внимание к движению живота.</li><li>День 2: дыхание лёжа + мягкие движения плечами.</li><li>День 3: 3 минуты дыхания + медленные повороты грудной клетки.</li><li>День 4: минимальная версия — 1 минута дыхания в удобном положении.</li><li>День 5: дыхание сидя + наклоны головы в комфортной амплитуде.</li><li>День 6: 5 минут «дыхание + движение руками».</li><li>День 7: выбрать самый приятный вариант и повторить его.</li></ul></div>
+<div class="week"><b>Неделя 2 · База: 5–8 минут</b><ul><li>Добавить дыхание с движением рёбер и мягкое раскрытие грудной клетки.</li><li>Ввести 2–3 упражнения на снятие напряжения шеи и плеч.</li><li>Завершать практику вопросом: «Где стало легче?»</li></ul></div>
+<div class="week"><b>Неделя 3 · Уверенность</b><ul><li>Собрать 8–10-минутную восстановительную практику.</li><li>Добавить лёгкую мобильность таза и позвоночника.</li><li>Подготовить переход к треку «Поясница и позвоночник» или «Осанка и плечи».</li></ul></div>
+<details><summary>Микроурок: почему это работает</summary><p>Дыхательные практики помогают снизить фоновое напряжение и вернуть внимание к телу. Это особенно полезно на старте: человек учится замечать сигналы тела, а не заставлять себя «терпеть».</p></details>
+<div class="task"><b>Инструктору:</b> записать 3 аудио-сессии по 3, 5 и 8 минут; снять видео «как не задерживать дыхание»; подготовить чек-ин «что изменилось в напряжении за неделю».</div></div>
+
+<div class="track"><div class="track-head"><div><span class="tag">Трек 2</span><h3>Поясница и позвоночник</h3><p class="mini">Для тех, кто много сидит, чувствует скованность после работы или хочет двигаться спокойнее.</p></div><span class="level">Вход → база → уверенность</span></div>
+<div class="week"><b>Неделя 1 · Вход: 5 минут</b><ul><li>День 1: мягкие наклоны таза сидя, 8–10 повторений в комфортном диапазоне.</li><li>День 2: «кошка-корова» в упоре или сидя, без прогибов через боль.</li><li>День 3: дыхание + мягкие повороты грудного отдела.</li><li>День 4: перерыв от сидения: встать, пройтись, сделать 3 наклона таза.</li><li>День 5: лёгкое вытяжение позвоночника и расслабление поясницы.</li><li>День 6: повторить самый комфортный комплекс.</li><li>День 7: 5 минут мобильности + короткая прогулка.</li></ul></div>
+<div class="week"><b>Неделя 2 · База: 6–10 минут</b><ul><li>Добавить контроль нейтрального положения таза.</li><li>Ввести мягкую стабилизацию корпуса: Dead Bug в облегчённом варианте.</li><li>Связать дыхание с движением: выдох — контроль, вдох — расслабление.</li></ul></div>
+<div class="week"><b>Неделя 3 · Уверенность</b><ul><li>Добавить наклоны, приседания до стула и перенос веса.</li><li>Учиться сохранять контроль корпуса в бытовых движениях.</li><li>Постепенно увеличивать амплитуду только при отсутствии дискомфорта.</li></ul></div>
+<details><summary>Микроурок: не «расшевелить» спину любой ценой</summary><p>Цель первых занятий — не «размять поясницу силой», а вернуть подвижность и контроль. Если упражнение вызывает резкую или отдающую боль, уменьшаем амплитуду, меняем положение или останавливаемся.</p></details>
+<div class="task"><b>Инструктору:</b> подготовить видео «безопасная амплитуда», 3 варианта кошки-коровы, облегчённый Dead Bug и алгоритм «что делать при дискомфорте».</div></div>
+
+<div class="track"><div class="track-head"><div><span class="tag">Трек 3</span><h3>Осанка и плечи</h3><p class="mini">Для тех, кто работает за компьютером, чувствует зажатость шеи или хочет двигаться собраннее.</p></div><span class="level">Вход → база → уверенность</span></div>
+<div class="week"><b>Неделя 1 · Вход: 5 минут</b><ul><li>День 1: осознанная пауза за рабочим местом: плечи вниз, мягкое вытяжение макушки.</li><li>День 2: круги плечами и сведение лопаток без зажима шеи.</li><li>День 3: дыхание с раскрытием грудной клетки.</li><li>День 4: «открывание книги» — мягкая ротация грудного отдела.</li><li>День 5: растяжение груди у стены в комфортной амплитуде.</li><li>День 6: 5-минутная практика после рабочего дня.</li><li>День 7: прогулка с периодическими «паузами осанки».</li></ul></div>
+<div class="week"><b>Неделя 2 · База: 6–10 минут</b><ul><li>Добавить контроль лопаток в лёгких отжиманиях от стены.</li><li>Ввести упражнения на подвижность грудного отдела.</li><li>Связать осанку с дыханием: без «вставшей спины» и зажатых плеч.</li></ul></div>
+<div class="week"><b>Неделя 3 · Уверенность</b><ul><li>Добавить удержания и лёгкую силовую работу на верх тела.</li><li>Тренировать положение плеч в бытовых движениях.</li><li>Собрать 10-минутный вечерний ритуал «разжать экранное напряжение».</li></ul></div>
+<details><summary>Микроурок: осанка — не поза «смирно»</summary><p>Хорошая осанка — это не жёстко выпрямленная спина, а способность менять положение и возвращаться в комфортное. Постоянное напряжение часто мешает больше, чем само положение тела.</p></details>
+<div class="task"><b>Инструктору:</b> снять серию «5 пауз для рабочего дня», видео по положению лопаток и безопасной растяжке груди; добавить напоминание каждые 60–90 минут сидячей работы.</div></div>
+
+<div class="track"><div class="track-head"><div><span class="tag">Трек 4</span><h3>Таз и мобильность</h3><p class="mini">Для тех, кто хочет легче приседать, наклоняться, вставать и менять положения.</p></div><span class="level">Вход → база → уверенность</span></div>
+<div class="week"><b>Неделя 1 · Вход: 5 минут</b><ul><li>День 1: покачивания тазом сидя и стоя, малая амплитуда.</li><li>День 2: мягкие круги тазом с опорой.</li><li>День 3: приседание до стула, 5–8 повторений.</li><li>День 4: наклон к опоре с ровной спиной в комфортном диапазоне.</li><li>День 5: выпад с опорой, короткая амплитуда.</li><li>День 6: переходы «сидя — стоя» без рывка.</li><li>День 7: 5 минут мобильности + прогулка.</li></ul></div>
+<div class="week"><b>Неделя 2 · База: 6–10 минут</b><ul><li>Добавить ротации таза и контроль коленей.</li><li>Увеличивать глубину приседа только при сохранении комфорта.</li><li>Ввести боковые перемещения и простые переходы на полу.</li></ul></div>
+<div class="week"><b>Неделя 3 · Уверенность</b><ul><li>Собрать функциональный комплекс: присед, наклон, выпад, перенос веса.</li><li>Добавить координацию: шаги, повороты, смена направления.</li><li>Подготовить переход к силовой работе с собственным весом.</li></ul></div>
+<details><summary>Микроурок: мобильность — это доступный диапазон</summary><p>Не нужно сразу стремиться к глубокой растяжке. Сначала важно научиться уверенно контролировать тот диапазон, который уже есть, и постепенно его расширять.</p></details>
+<div class="task"><b>Инструктору:</b> записать видео «присед до стула», «наклон с опорой», «безопасный выпад»; сделать 3 уровня глубины для каждого движения.</div></div>
+
+<div class="track"><div class="track-head"><div><span class="tag">Трек 5</span><h3>Колени, стопы и баланс</h3><p class="mini">Для тех, кто чувствует нестабильность, много ходит, хочет легче подниматься по лестнице и меньше уставать.</p></div><span class="level">Вход → база → уверенность</span></div>
+<div class="week"><b>Неделя 1 · Вход: 5 минут</b><ul><li>День 1: перекаты стопами и движения пальцами ног в комфортном диапазоне.</li><li>День 2: подъёмы на носки у опоры, 8–10 повторений.</li><li>День 3: стояние на одной ноге у опоры, 10–20 секунд на каждую.</li><li>День 4: мягкие сгибания-разгибания коленей без боли.</li><li>День 5: шаги на месте с контролем стопы.</li><li>День 6: подъём по лестнице в спокойном темпе.</li><li>День 7: короткая прогулка + растяжка голеностопа.</li></ul></div>
+<div class="week"><b>Неделя 2 · База: 6–10 минут</b><ul><li>Добавить приседания до стула с контролем коленей.</li><li>Тренировать баланс с уменьшением опоры — только без головокружения.</li><li>Ввести укрепление голеностопа и ягодиц.</li></ul></div>
+<div class="week"><b>Неделя 3 · Уверенность</b><ul><li>Добавить шаги в стороны, подъёмы и контролируемые приседания.</li><li>Учиться распределять вес между стопой, коленом и тазом.</li><li>Собрать 10-минутную практику устойчивости.</li></ul></div>
+<details><summary>Микроурок: стабильность важнее глубины</summary><p>Для коленей и стоп важнее не «сесть как можно ниже», а сохранить управляемое движение. Опора, медленный темп и комфортная амплитуда — нормальная часть прогресса.</p></details>
+<div class="task"><b>Инструктору:</b> подготовить тест баланса, 3 уровня приседания, упражнения для стоп и чек-лист «когда нужна очная оценка специалиста».</div></div>
+
+<div class="track"><div class="track-head"><div><span class="tag">Трек 6</span><h3>Сила тела</h3><p class="mini">Для тех, кто хочет стать сильнее дома, без сложного оборудования и без гонки за результатом.</p></div><span class="level">Вход → база → уверенность</span></div>
+<div class="week"><b>Неделя 1 · Вход: 5–7 минут</b><ul><li>День 1: приседание до стула, 5–8 повторений.</li><li>День 2: отжимание от стены, 5–8 повторений.</li><li>День 3: планка с колен, 10–20 секунд.</li><li>День 4: перенос веса стоя, 8 повторений в каждую сторону.</li><li>День 5: подъём таза лёжа, 8–10 повторений.</li><li>День 6: лёгкая прогулка + растяжка.</li><li>День 7: повторить 3 самых понятных упражнения.</li></ul></div>
+<div class="week"><b>Неделя 2 · База: 8–12 минут</b><ul><li>Добавить второй подход к базовым движениям.</li><li>Усложнить отжимание: от стены к возвышенности.</li><li>Ввести удержания и контроль корпуса.</li></ul></div>
+<div class="week"><b>Неделя 3 · Уверенность</b><ul><li>Собрать мини-круг: приседание, отжимание, тяга/гребок с резинкой, планка.</li><li>Добавить 1–2 упражнения с инвентарём по желанию: гантели, гири, резинка.</li><li>Обсудить с инструктором персональную прогрессию.</li></ul></div>
+<details><summary>Микроурок: техника важнее количества</summary><p>Лучше сделать 5 контролируемых повторений, чем 20 быстрых. Останавливайся, когда техника начинает разваливаться, а не когда совсем нет сил.</p></details>
+<div class="task"><b>Инструктору:</b> снять технику приседания, отжиманий от стены, планки и подъёма таза; подготовить варианты «проще/обычно/сложнее» и короткий тест исходного уровня.</div></div>
+
+<div class="track"><div class="track-head"><div><span class="tag">Трек 7</span><h3>Кор и контроль движения</h3><p class="mini">Для тех, кто хочет устойчивости, координации и более уверенного контроля тела.</p></div><span class="level">Вход → база → уверенность</span></div>
+<div class="week"><b>Неделя 1 · Вход: 5 минут</b><ul><li>День 1: дыхание лёжа с ощущением опоры поясницы.</li><li>День 2: Dead Bug с укороченной амплитудой.</li><li>День 3: планка с колен, 10–15 секунд.</li><li>День 4: баланс стоя с лёгким движением руками.</li><li>День 5: «мёртвый жук» с контролем поясницы.</li><li>День 6: мягкие скручивания грудного отдела.</li><li>День 7: повторить комфортный мини-комплекс.</li></ul></div>
+<div class="week"><b>Неделя 2 · База: 6–10 минут</b><ul><li>Добавить антиротацию: удержание корпуса при движении рукой или ногой.</li><li>Увеличивать время удержаний небольшими шагами.</li><li>Связать кор с дыханием и положением таза.</li></ul></div>
+<div class="week"><b>Неделя 3 · Уверенность</b><ul><li>Добавить координацию: противоположные рука-нога, перенос веса, шаги.</li><li>Собрать комплекс «устойчивость в движении».</li><li>Перейти к более силовым или функциональным задачам.</li></ul></div>
+<details><summary>Микроурок: кор — это не только пресс</summary><p>Кор помогает сохранять контроль при движении рук, ног и изменении положения тела. Его задача — не «втянуть живот», а создать устойчивость без лишнего напряжения.</p></details>
+<div class="task"><b>Инструктору:</b> записать видео по нейтральному положению поясницы, Dead Bug, планке и антиротации; сделать варианты для новичков и людей с дискомфортом в спине.</div></div>
+
+<div class="rule"><b>Общее правило прогресса:</b> переходи на следующий уровень, если 3 занятия подряд прошли комфортно, техника понятна и после занятия нет острой боли или сильной усталости. Если пропустил(а) — просто вернись к последнему комфортному уровню.</div>
 </section>
 
 <section id="flow">
@@ -166,8 +248,8 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding-top:22px;color:v
 <div class="grid">
 <div class="card"><h3>1. Диагностика без ярлыков</h3><p>Мягкий опрос: цель, барьеры, комфортное время, самочувствие, предпочтительный формат.</p></div>
 <div class="card"><h3>2. Микро-старт</h3><p>Первая сессия — 2–5 минут. Задача не «потренироваться», а доказать мозгу: это возможно и безопасно.</p></div>
-<div class="card"><h3>3. Привычка</h3><p>Гибкий минимум, напоминания, короткая обратная связь и понятный критерий «когда можно усложнить».</p></div>
-<div class="card"><h3>4. Переход к сопровождению</h3><p>Когда человеку нужна техника, персональная прогрессия или поддержка — органично предлагаем инструктора.</p></div>
+<div class="card"><h3>3. Ежедневный экран</h3><p>Таймер, минимальная версия, отметка самочувствия и адаптивная рекомендация на завтра.</p></div>
+<div class="card"><h3>4. Переход к сопровождению</h3><p>Когда нужны техника, персональная прогрессия или поддержка — органично предлагаем инструктора.</p></div>
 </div>
 </section>
 
@@ -184,7 +266,7 @@ footer{margin-top:70px;border-top:1px solid var(--line);padding-top:22px;color:v
 </section>
 
 <footer>
-<p><b>Следующий шаг:</b> подключить Telegram WebApp SDK, сохранить ответы в localStorage/бэкенд, добавить пуш-сценарии, видеоуроки и лид-форму к инструктору.</p>
+<p><b>Следующий шаг:</b> подключить Telegram WebApp SDK, сохранить ответы и прогресс в localStorage/бэкенд, добавить пуш-сценарии, видеоуроки и лид-форму к инструктору.</p>
 <p>© Демо-версия маршрута «Движение без давления» · Юра Семенов</p>
 </footer>
 </div>
@@ -195,17 +277,26 @@ function show(i){steps.forEach((s,idx)=>s.classList.toggle('active',idx===i));do
 document.querySelectorAll('.opt').forEach(b=>b.addEventListener('click',()=>{const q=b.closest('.q');answers[q.dataset.step]=b.dataset.k;if(q.dataset.step<steps.length-1){step++;show(step);}else{finish();}}));
 function prev(){if(step>0){step--;show(step);}}
 function restart(){Object.keys(answers).forEach(k=>delete answers[k]);step=0;document.getElementById('result').classList.remove('active');show(0);document.getElementById('bar').style.width='0%';document.getElementById('result').scrollIntoView({behavior:'smooth'});}
-function finish(){
-document.getElementById('bar').style.width='100%';steps.forEach(s=>s.classList.remove('active'));
-const goal=answers[0],barrier=answers[1],time=answers[2],style=answers[3],support=answers[4];
+function finish(){document.getElementById('bar').style.width='100%';steps.forEach(s=>s.classList.remove('active'));
+const goal=answers[0],time=answers[2],style=answers[3];
 const track={energy:'Дыхание и восстановление + мягкая активация',back:'Поясница и позвоночник',posture:'Осанка и плечи',mobility:'Таз и мобильность',legs:'Колени, стопы и баланс',strength:'Сила тела и контроль движения'}[goal];
 const minutes={5:'5 минут',10:'10 минут','15':'15–20 минут',flex:'гибкий минимум от 2 минут'}[time];
 const first={calm:'3 минуты дыхания и мягкой мобильности',functional:'3 минуты мобильности таза и позвоночника',active:'3 минуты мягкой силы и баланса',mixed:'3 минуты дыхания, мобильности и одного силового движения'}[style];
 document.getElementById('resultText').textContent=`Тебе ближе трек «${track}». На первую неделю ставим ${minutes}: без рекордов, боли и необходимости «нагнать» пропущенное.`;
-document.getElementById('plan').innerHTML=`<b>День 1–2:</b> ${first}.<br><b>День 3–4:</b> добавить одно упражнение на контроль и осанку.<br><b>День 5–7:</b> повторить комфортный вариант и отметить самочувствие.<br><b>Правило:</b> если нет сил — выполняется минимальная версия. Это тоже считается.<br><b>Когда переходить дальше:</b> если 3 занятия подряд прошли без дискомфорта и хочется чуть большего.`;
-document.getElementById('result').classList.add('active');
-document.getElementById('result').scrollIntoView({behavior:'smooth'});
-}
+document.getElementById('plan').innerHTML=`<b>День 1–2:</b> ${first}.<br><b>День 3–4:</b> добавить одно упражнение на контроль и осанку.<br><b>День 5–7:</b> повторить комфортный вариант и отметить самочувствие.<br><b>Неделя 2:</b> добавить один новый элемент и увеличить время не более чем на 2–3 минуты.<br><b>Правило:</b> если нет сил — выполняется минимальная версия. Это тоже считается.<br><b>Когда переходить дальше:</b> если 3 занятия подряд прошли без дискомфорта и хочется чуть большего.`;
+document.getElementById('result').classList.add('active');document.getElementById('result').scrollIntoView({behavior:'smooth'});}
+
+let t=null,left=300;
+function fmt(n){return String(Math.floor(n/60)).padStart(2,'0')+':'+String(n%60).padStart(2,'0')}
+function startTimer(){clearInterval(t);left=300;document.getElementById('timer').textContent=fmt(left);t=setInterval(()=>{left--;document.getElementById('timer').textContent=fmt(left);if(left<=0){clearInterval(t);document.getElementById('timer').textContent='Готово';document.getElementById('done').checked=true;}},1000)}
+function setMin(){clearInterval(t);left=60;document.getElementById('timer').textContent=fmt(left);t=setInterval(()=>{left--;document.getElementById('timer').textContent=fmt(left);if(left<=0){clearInterval(t);document.getElementById('timer').textContent='Минимум выполнен';document.getElementById('done').checked=true;}},1000)}
+document.querySelectorAll('.fb').forEach(b=>b.addEventListener('click',()=>{
+document.querySelectorAll('.fb').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');
+document.getElementById('nextBox').classList.add('active');
+const map={easy:['Завтра можно чуть расширить практику','Добавь 1–2 минуты или одно новое упражнение. Если хочется — повтори сегодняшнюю сессию ещё раз, но не обязательно.'],ok:['Завтра повторяем тот же уровень','Это хороший результат. Сделай ту же сессию ещё раз: сейчас важнее повторяемость, чем усложнение.'],hard:['Завтра — минимальная версия','Сократи сессию до 1–3 минут. Оставь только самые приятные упражнения. Прогресс — это не всегда больше нагрузки.'],pain:['Останавливаемся и корректируем','Не продолжай через боль. Уменьши амплитуду, выбери другое положение или сделай только дыхание. Если боль повторяется — обсуди это с инструктором или специалистом.']};
+const r=map[b.dataset.fb];document.getElementById('nextTitle').textContent=r[0];document.getElementById('nextText').textContent=r[1];
+document.getElementById('nextTitle').style.color=b.dataset.fb==='pain'?'#ffd479':'var(--accent)';
+}));
 show(0);
 </script>
 </body>
